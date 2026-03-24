@@ -7,3 +7,4 @@ f1 x y = x y
 f2 :: p -> p
 f2 x = x
 --Al evaluar las siguientes expresiones tendra la respuesta
+--f1 (*2) 4
