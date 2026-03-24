@@ -21,3 +21,5 @@ f3 :: Integer -> Integer
 f3= f2 (*) 4
 f4 :: Integer -> Integer
 f4 = (f1 (*)) 4
+--f5 = f1 4 -- da error f1 espera una funcion por eso no funciona
+f6 = f2 4
