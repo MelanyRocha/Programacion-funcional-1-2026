@@ -17,3 +17,7 @@ f1:(ty -> tr)-> (ty ->tr)
 f9 :: (t1 -> t2 -> t3) -> t1 -> t2 -> t3
 f9 x y z = (x y) z
 -- f9 x y z = x y z
+f3 :: Integer -> Integer
+f3= f2 (*) 4
+f4 :: Integer -> Integer
+f4 = (f1 (*)) 4
