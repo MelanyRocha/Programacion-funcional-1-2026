@@ -23,3 +23,4 @@ f4 :: Integer -> Integer
 f4 = (f1 (*)) 4
 --f5 = f1 4 -- da error f1 espera una funcion por eso no funciona
 f6 = f2 4 -- f2 es mas general que f1 por eso acepta todo
+--- para el martes 31/03/2026 repaso de currying
