@@ -68,4 +68,33 @@ tail :: [a] -> [a]
       In the expression: tail [(+), (*)] [2, 5]
       In an equation for ‘it’: it = tail [(+), (*)] [2, 5]
     • Relevant bindings include it :: t (bound at <interactive>:40:1)
+
+
+Main> tail [(+),(*)] 2 5
+                [(*)] no se puede aplicar a 2 5
+
+
+      LAST
+last :: [a] -> a
+*Main> last [1,2,3,4]
+4
+*Main> last [[1,2,7,8,9,10]]
+[1,2,7,8,9,10]
+*Main> last [[]]
+[]
+*Main> last [[[]]]
+[[]]
+*Main> last [(+1),(+2),(+5)] 10
+15
+*Main> last [(+),(*)] 10
+
+<interactive>:51:1: error:
+    • No instance for (Show (Integer -> Integer))
+        arising from a use of ‘print’
+        (maybe you haven't applied a function to enough arguments?)
+    • In a stmt of an interactive GHCi command: print it
+*Main> 
+
+
+
 -}
