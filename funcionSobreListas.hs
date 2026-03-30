@@ -93,8 +93,20 @@ last :: [a] -> a
         arising from a use of ‘print’
         (maybe you haven't applied a function to enough arguments?)
     • In a stmt of an interactive GHCi command: print it
-*Main> 
 
 
+              INIT
+
+init :: [a] -> [a]
+*Main> init [1, 2, 7, 8]
+[1,2,7]
+*Main> init [[1, 2, 3]]
+[]
+*Main> init [[[]]]
+[]
+*Main> init [[]]
+[]
+*Main> init [[1, 2, 3], [4, 5], [ ]]
+[[1,2,3],[4,5]]
 
 -}
