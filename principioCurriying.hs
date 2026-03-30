@@ -51,7 +51,12 @@ f5=(\(x,y) -> \(z ,w) -> (x y )+ (z w))
 f6 x = x
 f7 x y = x y
 f8 x y z = x (y z)
+
+
 f9 x y z = (x y) z
+f9 :: (tx -> ty -> tz) -> tx -> ty ->tz
+
+
 f10 x y z w= x (y (z w))
 f11 x y z w= ((x y) z) w
 f12 x y z w= ((x y) (z w))
