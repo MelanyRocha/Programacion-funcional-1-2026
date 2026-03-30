@@ -48,7 +48,10 @@ f4:: (Int -> Bool) -> ty -> Int -> Int ->Int
 
 
 f5=(\(x,y) -> \(z ,w) -> (x y )+ (z w))
+
+f6 :: p -> p
 f6 x = x
+
 f7 x y = x y
 f8 x y z = x (y z)
 
