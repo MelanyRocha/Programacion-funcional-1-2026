@@ -25,8 +25,16 @@ porque:
 [[1, 2, 3], [ ] ] :: [[Int]]
 [[[ ]]] :: [[[a]]] [[[a]]] no puede ser [[Int]]
 
+funcion sobre listas HEAD
+head :: [a] -> a
+*Main> head [1,2,4,5]
+1
+*Main> head [[1,2,3]]
+[1,2,3]
+
+*Main> head [[[]]]
+[[]]
+
+*Main> head [[],[[1,2,7]]]
+[]
 -}
-
-
-
-
