@@ -36,3 +36,7 @@ f1 (&&):: (Bool (Bool->Bool))
 -- 5) f2 g 8::
 -- 6) f1 g True::
 -- 7) f2 g True::
+
+f00 x y z w = x (y z)(w 5) 
+ 
+ff x y z w = x y z w 5
