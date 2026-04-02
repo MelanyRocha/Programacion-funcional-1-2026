@@ -40,6 +40,7 @@ f1 (&&):: (Bool (Bool->Bool))
 f00 :: Num t1 => (t2 -> t3 -> t4) -> (t5 -> t2) -> t5 -> (t1 -> t3) -> t4
 f00 x y z w = x (y z)(w 5) 
  
+ff :: Num t1 => (t2 -> t3 -> t4 -> t1 -> t5) -> t2 -> t3 -> t4 -> t5
 ff x y z w = x y z w 5
 
 gg x y z w = x((y z 3)(w 7)) + 10
