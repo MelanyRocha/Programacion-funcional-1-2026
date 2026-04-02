@@ -37,6 +37,7 @@ f1 (&&):: (Bool (Bool->Bool))
 -- 6) f1 g True::
 -- 7) f2 g True::
 
+f00 :: Num t1 => (t2 -> t3 -> t4) -> (t5 -> t2) -> t5 -> (t1 -> t3) -> t4
 f00 x y z w = x (y z)(w 5) 
  
 ff x y z w = x y z w 5
