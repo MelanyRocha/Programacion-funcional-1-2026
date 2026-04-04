@@ -45,3 +45,5 @@ ff x y z w = x y z w 5
 
 gg x y z w = x((y z 3)(w 7)) + 10
 gg:: (c->Int)->(a->Int->b->c)->a->(Int->b)->Int
+
+funcion que
