@@ -3,7 +3,9 @@ doble :: Num a => a -> a
 doble x=2*x
 --Funciones polimorficas --> trabaja con cualquier tipo
 -- de datoas
-primero (x,y)=x
+primero (x,y)=x 
+-- funcion suma de dos numeros
+suma2 x y = x+y
 mas x y = x+y
 --DEFINICION DE FUNCIONES
 --por combinacion
