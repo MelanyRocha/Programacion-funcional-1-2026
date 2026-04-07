@@ -114,7 +114,8 @@ init :: [a] -> [a]
 Prelude> map (even.head) [[1,2,3,4],[6,7,1,2],[7,8]]
 [False,True,False]
 
-
+Prelude> filter ((>2).head) [[1,2,3,4],[6,7,1,2],[7,8]]
+[[6,7,1,2],[7,8]]
 
 
 -}
