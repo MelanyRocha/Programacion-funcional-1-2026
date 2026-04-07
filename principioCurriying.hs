@@ -60,7 +60,7 @@ f9 x y z = (x y) z
 f9 :: (tx -> ty -> tz) -> tx -> ty ->tz
 
 
-f10 :: (t1 -> t2) -> (t3 -> t1) -> (t4 -> t3) -> t4 -> t2
+f10 :: (tx -> tr) -> (tz -> tx) -> (tw -> tz) -> tw -> tr
 f10 x y z w= x (y (z w))
 f11 x y z w= ((x y) z) w
 f12 x y z w= ((x y) (z w))
