@@ -3,10 +3,14 @@
 tercero :: [a] -> a
 tercero xs = head (tail (tail xs))
 --2. Definir una función que reciba una lista de elementos y devuelva el segundo
-
+segundo :: [a] -> a
+segundo xs = head (tail xs)
 --3. Definir una función que reciba una lista de listas de funciones y un elemento y aplique la 1ra función
 --de la primera lista al elemento
+listafun xss x = (head(head xss)) x
 
+--ejemplo
+[[(*2)]]
 --4. Definir una función que reciba una lista de listas y devuelva el 5to. Elemento de la 3ra. lista.
 
 --5. Definir una función que reciba una lista de listas de listas y devuelva el 3er. elemento de la 4ta. Lista
@@ -14,6 +18,12 @@ tercero xs = head (tail (tail xs))
 
 --6. Definir una función que verifique si una lista esta ordenada de acuerdo a una función de orden.
 
+--6.1 verificar si dos listas son iguales
+soniguales [1,2,3] [1,2,3] = True
+soniguales xs ys = (length (filter (\x -> elem x ys) xs)) == length xs
+
+sonigualev2 xs ys = (length (filter cmp(zip xs ys))==0) && (length xs == length ys)
+    where cmp (x,y) = x /= y
 --7. Definir una función que compare 2 listas y devuelva True si las listas son iguales
 
 --8. Definir una función que verifique si una lista de listas podría ser considerada una matriz
