@@ -109,4 +109,14 @@ init :: [a] -> [a]
 *Main> init [[1, 2, 3], [4, 5], [ ]]
 [[1,2,3],[4,5]]
 
+
+            Practtica
+Prelude> map (even.head) [[1,2,3,4],[6,7,1,2],[7,8]]
+[False,True,False]
+
+
+
+
 -}
+
+
