@@ -1,6 +1,7 @@
 --II. Utilizando las funciones estándar sobre listas, definir las siguientes funciones:
 --1. Definir una función que reciba una lista de elementos y devuelva el tercero
-
+tercero :: [a] -> a
+tercero xs = head (tail (tail xs))
 --2. Definir una función que reciba una lista de elementos y devuelva el segundo
 
 --3. Definir una función que reciba una lista de listas de funciones y un elemento y aplique la 1ra función
