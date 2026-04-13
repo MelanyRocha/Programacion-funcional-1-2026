@@ -59,3 +59,9 @@ sonigualev2 xs ys = (length (filter cmp(zip xs ys))==0) && (length xs == length 
 --21. Definir una función que reciba un número y devuelva una lista con los posibles divisores del número.
 
 --22. Definir la función zipWith en terminos de zip
+
+--Obtener la fila n de una matriz
+
+--Obtener la columna n de una matriz
+
+--Verificar si una matriz es un cuadrado perfecto(la suma de sus filas , colimnas y diagonales da el mismo resultado)
