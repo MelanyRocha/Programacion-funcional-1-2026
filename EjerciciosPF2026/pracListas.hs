@@ -80,4 +80,14 @@ columna xss n = map (!! (n-1)) xss
 --Main> columna [[1,2,3],[11,22,33],[10,20,30]] 2
 --[2,22,20]
 --Verificar si una matriz es un cuadrado perfecto(la suma de sus filas , colimnas y diagonales da el mismo resultado)
+--------
+m1 = [[1,2,3]
+     ,[11,22,33]
+     ,[10,20,30]]
 
+diagPrin mss= map f [0..n]
+    where 
+        n = (length mss) - 1
+        f pos= (mss!!pos)!!pos
+--Main> diagPrin m1
+--[1,22,30]
