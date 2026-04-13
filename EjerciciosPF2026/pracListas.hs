@@ -10,7 +10,7 @@ segundo xs = head (tail xs)
 listafun xss x = (head(head xss)) x
 
 --ejemplo
-[[(*2)]]
+--[[(*2)]]
 --4. Definir una función que reciba una lista de listas y devuelva el 5to. Elemento de la 3ra. lista.
 
 --5. Definir una función que reciba una lista de listas de listas y devuelva el 3er. elemento de la 4ta. Lista
@@ -61,7 +61,23 @@ sonigualev2 xs ys = (length (filter cmp(zip xs ys))==0) && (length xs == length 
 --22. Definir la función zipWith en terminos de zip
 
 --Obtener la fila n de una matriz
-
+fila:: [[a]] -> Int -> [a]
+fila xss n = head (drop (n-1) xss)
+fila2 :: [a] -> Int -> a
+fila2 xss n = xss!!(n-1)
+{-*Main> fila [[1,2,3],[11,22,33],[10,20,30]] 2
+[11,22,33]
+*Main> fila2 [[1,2,3],[11,22,33],[10,20,30]] 2
+[11,22,33]
+*Main> fila2 [[1,2,3],[11,22,33],[10,20,30]] 1
+[1,2,3]
+*Main> fila2 [[1,2,3],[11,22,33],[10,20,30]] 3
+[10,20,30]
+*Main> -}
 --Obtener la columna n de una matriz
-
+columna:: [[a]] -> Int -> [a]
+columna xss n = map (!! (n-1)) xss
+--Main> columna [[1,2,3],[11,22,33],[10,20,30]] 2
+--[2,22,20]
 --Verificar si una matriz es un cuadrado perfecto(la suma de sus filas , colimnas y diagonales da el mismo resultado)
+
