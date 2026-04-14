@@ -120,6 +120,13 @@ Prelude> filter ((>2).head) [[1,2,3,4],[6,7,1,2],[7,8]]
 Prelude> takeWhile (even.head) [[1,2,3,4],[6,7,1,2],[7,8]]
 []
 
+
+--even 4 => True
+-- odd 4 => False
+Main> even 4
+True
+*Main> odd 4
+False
 -}
 
 
