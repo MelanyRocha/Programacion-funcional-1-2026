@@ -60,6 +60,25 @@ sonigualev2 xs ys = (length (filter cmp(zip xs ys))==0) && (length xs == length 
 
 --22. Definir la función zipWith en terminos de zip
 
+-- 23. Definir una funcion que reciba 2 fechas y devuelva los anios, meses, dias transcurridos
+transcurridos :: (Int, Int, Int) -> (Int, Int, Int) -> (Int, Int, Int)
+transcurridos (d1, m1, a1) (d2, m2, a2) = (d2-d1, m2-m1, a2-a1)
+
+
+--(20,2,200)(15,3,2002) => (5, 1, 2)
+transcurrido2 f1 f2 
+    = toFecha ((toDias f2) - (toDias f1))
+    where toDias (d, m, a) = d + m*30 + a*365
+          toFecha dias = (dias `mod` 30, (dias `div` 30) `mod` 12, dias `div` 365)
+--Definir una funcion que reciba 2 fechas y devuelva los anios, meses, dias transcurridos
+transc f1 f2 =toFecha ((toDia f2) - (toDia f1))
+toDia (d,m,a) = a*365 + m*30 + d
+toFecha n = (dias, meses, div n 365)
+    where 
+        diasRest = mod n 365
+        meses = div diasRest 30
+        dias = (mod diasRest 30)
+
 --Obtener la fila n de una matriz
 fila:: [[a]] -> Int -> [a]
 fila xss n = head (drop (n-1) xss)
