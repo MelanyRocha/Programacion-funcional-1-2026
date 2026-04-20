@@ -22,7 +22,7 @@ Prelude> [10*x | x<- [2..8], x>5]
 
 -- En una lista por comprension
 [expr | generador1, generador2,.., calif1 calif2]
---reglas
+--reglas 
 --1. generadores posteriore varian mas rapido que anteriores
 [(x,y)| x <-[3,4,5],y <- [2,9]]
 =>[(3,2),(3,9),(4,2),(4,9),(5,2),(5,9)]
@@ -32,4 +32,13 @@ Prelude> [10*x | x<- [2..8], x>5]
   (2,10,'a'),(2,10,'b'),(2,20,'a'),(2,20,'b'),(2,30,'a'),(2,30,'b'),
   (3,10,'a'),(3,10,'b'),(3,20,'a'),(3,20,'b'),(3,30,'a'),(3,30,'b')]
 
+  length [(x,y,z)|x<- [1,2,3],y<-[10,20,30],z <- ['a','b']]
+=>18
 
+--2. Generadores posteriores pueden usar valores introducidos
+--por anteriores, no viceversa
+[(x,y)| x <- [3,4,5], y <- [x..6]]
+=>[(3,3),(3,4),(3,5),(3,6),(4,4),(4,5),(4,6),(5,5),(5,6)]
+
+[(x,y)| x <- [3..y], y <- [4,5,6]]
+=>[(3,4),(3,5),(3,6),(4,4),(4,5),(4,6),(5,5),(5,6),(6,6)]
