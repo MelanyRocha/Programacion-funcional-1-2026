@@ -34,11 +34,15 @@ Prelude> [10*x | x<- [2..8], x>5]
 
   length [(x,y,z)|x<- [1,2,3],y<-[10,20,30],z <- ['a','b']]
 =>18
-
+-- estructurada
+for x=1 hasta 3
+    para y=10 hasta 30 con paso 10
+        para z en ['a','b']
+            imprimir (x,y,z)
 --2. Generadores posteriores pueden usar valores introducidos
 --por anteriores, no viceversa
 [(x,y)| x <- [3,4,5], y <- [x..6]]
 =>[(3,3),(3,4),(3,5),(3,6),(4,4),(4,5),(4,6),(5,5),(5,6)]
 
 [(x,y)| x <- [3..y], y <- [4,5,6]]
-=>[(3,4),(3,5),(3,6),(4,4),(4,5),(4,6),(5,5),(5,6),(6,6)]
+=> <interactive>:11:18: error: Variable not in scope: y
