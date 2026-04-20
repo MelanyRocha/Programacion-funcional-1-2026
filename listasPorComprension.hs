@@ -46,3 +46,16 @@ for x=1 hasta 3
 
 [(x,y)| x <- [3..y], y <- [4,5,6]]
 => <interactive>:11:18: error: Variable not in scope: y
+
+--3. Generadores posteriores ocultan valores introducidos
+--por anteriores
+[x | x<-[1,2,3],x<-[40,50,60,70]] 
+x=1 x<-[40,50,60,70] => x=40, x=50, x=60, x=70
+x=2 x<-[40,50,60,70] => x=40, x=50, x=60, x=70
+x=3 x<-[40,50,60,70] => x=40, x=50, x=60, x=70
+=> [40,50,60,70,40,50,60,70,40,50,60,70]
+
+4.
+
+5.
+--hata lsitas por comprension el examen
