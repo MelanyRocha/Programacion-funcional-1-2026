@@ -59,8 +59,8 @@ x=3 x<-[40,50,60,70] => x=40, x=50, x=60, x=70
 --[x|x<-[1..7000], x<5]
 
 --4.El orden de los calificadores puede afectar la eficiencia
---ejercicios:
-a) [(x,y)|x<-[1..5],x<3, y <-[10,20,30]]
+--ejercicios: no siempre se necesitan definiciones locales, pero a veces pueden mejorar la eficiencia
+a) [(x,y)|x<-[1..5],x<3, y <-[10,20,30]] -- poner como aqui el calificador lo antes posible x<3
 => [(1,10),(1,20),(1,30),(2,10),(2,20),(2,30)]
 
 b) [(x,y)|x<-[1..5], y <-[10,20,30], x<3]
