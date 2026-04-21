@@ -55,7 +55,20 @@ x=2 x<-[40,50,60,70] => x=40, x=50, x=60, x=70
 x=3 x<-[40,50,60,70] => x=40, x=50, x=60, x=70
 => [40,50,60,70,40,50,60,70,40,50,60,70]
 
-4.
+--{x|xE lN, x<5} = [1,2,3,4]
+--[x|x<-[1..7000], x<5]
+
+--4.El orden de los calificadores puede afectar la eficiencia
+--ejercicios:
+a) [(x,y)|x<-[1..5],x<3, y <-[10,20,30]]
+
+b) [(x,y)|x<-[1..5], y <-[10,20,30], x<3]
+
+c) [(x*10)+y|x<-[1,2],y<-[3,4,5]]
+
+d) [v+y|x<-[1,2],let v=x*10, y<-[3,4,5]]
+
+e) [v+y|x<-[1,2],y<-[3,4,5],let v=x*10]
 
 5.
---hata lsitas por comprension el examen
+--hata listas por comprension el examen
