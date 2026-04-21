@@ -69,7 +69,8 @@ b) [(x,y)|x<-[1..5], y <-[10,20,30], x<3]
 c) [(x*10)+y|x<-[1,2],y<-[3,4,5]]
 => [13,14,15,23,24,25]
 
-d) [v+y|x<-[1,2],let v=x*10, y<-[3,4,5]]
+d) [v+y|x<-[1,2],let v=x*10, y<-[3,4,5]] -- este es mas eficiente que el anterior 
+--porque se calcula v una sola vez por cada x, mientras que en el anterior se calcula x*10 para cada y
 => [13,14,15,23,24,25]
 
 e) [v+y|x<-[1,2],y<-[3,4,5],let v=x*10]
