@@ -82,7 +82,8 @@ e) [v+y|x<-[1,2],y<-[3,4,5],let v=x*10]
 --hata listas por comprension el examen
 --Usando listas por comprension, definir
 1. map
-miMap f xs = [f x | x <- xs]
+miMap f xs = [f x | x <- xs]-- esto agarra cada elemento de la lista,
+-- lo pasa por la funcion f, y lo agrega a la lista resultante
 2. filter
 miFilter f xs = [x | x <- xs, f x] -- esto agarra cada elemento de la lista,
 -- lo pasa por la funcion f, y si f devuelve True, lo agrega a la lista resultante
@@ -93,4 +94,7 @@ miConcat xss = [x | xs <- xss, x <- xs] -- esto agarrar cada lista de la
 miLength xs = sum [1 | x <- xs]
 
 5. zip
+miZip xs ys =  [(x,y) | x <- xs, y <- ys] 
+
 6. zipWith
+miZipWith f xs ys = [f x y | x <- xs, y <- ys] -- esto agarra cada elemento de la lista xs y cada elemento de la lista ys, los pasa por la funcion f, y lo agrega a la lista resultante 
