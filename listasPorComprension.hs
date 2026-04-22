@@ -84,9 +84,13 @@ e) [v+y|x<-[1,2],y<-[3,4,5],let v=x*10]
 1. map
 miMap f xs = [f x | x <- xs]
 2. filter
-miFilter f xs = [x | x <- xs, f x] -- 
+miFilter f xs = [x | x <- xs, f x] -- esto agarra cada elemento de la lista,
+-- lo pasa por la funcion f, y si f devuelve True, lo agrega a la lista resultante
 3. concat
 miConcat xss = [x | xs <- xss, x <- xs] -- esto agarrar cada lista de la 
 --lista de listas, y luego agarrar cada elemento de esa lista y ponerlo en la lista resultante
 4. length
 miLength xs = sum [1 | x <- xs]
+
+5. zip
+6. zipWith
