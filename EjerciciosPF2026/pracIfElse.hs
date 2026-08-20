@@ -20,4 +20,6 @@ mayor4 a b c d = if a>b && a>c && a>d
 --10. Definir una función que reciba dos exámenes parciales, un final y una segunda
 --instancia y devuelva el mensaje “Aprobado”, “Reprobado” o “Abandono” según el
 --caso.
+estadoAcademico p1 p2 f si 
 --11. Definir una función que reciba 2 fechas y devuelva la fecha mayor
+fecMay @1(a1,m1,d1) @2(a2,m2,d2) 
