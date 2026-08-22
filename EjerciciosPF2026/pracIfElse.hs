@@ -26,7 +26,10 @@ estadoAcademico p1 p2 f si = if (p1==0 && p2==0 && f==0 && si==0)
                                      then "Aprobado"
                                      else "Reprobado"
 
-    
-
 --11. Definir una función que reciba 2 fechas y devuelva la fecha mayor
---fecMay @1(a1,m1,d1) @2(a2,m2,d2) 
+fecMay::(Int,Int,Int)->(Int,Int,Int)->(Int,Int,Int)
+fecMay (a1,m1,d1) (a2,m2,d2)=
+    if a1>a2 && m1>m2 && d1>d2 
+        then f1
+        else f2
+
